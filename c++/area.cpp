@@ -1,3 +1,4 @@
+//are of rectangle and circel
 #include<iostream> 
 using namespace std; 
  
