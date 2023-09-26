@@ -14,9 +14,8 @@ class Employ
 {
     
     string emp_name;   
-    protected: 
-    static int wage_Employ_id ; 
-    static int sale_Employ_id ; 
+    protected:  
+     
     string emp_type; 
     int emp_id; 
     int hr;
@@ -55,13 +54,12 @@ class Employ
         
 
 };  
-int Employ :: wage_Employ_id=23901;
-int Employ :: sale_Employ_id=24901;
 class wageEmploye : public Employ 
 {
      
     double wagesalary; 
-    int rate=200;
+    int rate=200; 
+    static int wage_Employ_id ;
     public : 
        wageEmploye()
        {
@@ -88,13 +86,15 @@ class wageEmploye : public Employ
            cout <<endl;
        } 
        
-}; 
+};  
+int  wageEmploye:: wage_Employ_id=23901;
 class salesPerson : public Employ
 {
     int sales; 
     int commission=10000; 
     int rate=100;
-    double salesalary;
+    double salesalary; 
+    static int sale_Employ_id ;
     public : 
        salesPerson()
        {
@@ -122,7 +122,8 @@ class salesPerson : public Employ
            cout <<endl;
        } 
        
-};
+}; 
+int salesPerson :: sale_Employ_id=24901;
 int main()
 {
     int emp_nos; 
@@ -138,7 +139,7 @@ int main()
     cin >> sale_nos;
     salesPerson * salespersons=new salesPerson[sale_nos];
     emp_nos=wage_nos+sale_nos;
-    
+
      
     do 
     {  
@@ -150,6 +151,7 @@ int main()
         cout <<"Choice 0 :" <<'\t'<<"Exist"<<endl;
         cout <<endl; 
         choice1=choice();  
+        //here we are cheaking wether user is giving correct choice of input or not 
         while(!(choice1>=0&&choice1<=3))
         {
             cout << "Invalid input enter choice between 1 to 3" <<endl;
@@ -158,7 +160,8 @@ int main()
         switch(choice1)
         {
             case Insert_data :
-
+                //here we are cheking if the no of total employs data is inserted or not 
+                // if yes and we do not stop program will crash 
                 if(i>=emp_nos)
                 {
                     cout <<"There are only " << i <<" employs you can not insert any more data " <<endl;
@@ -169,7 +172,8 @@ int main()
                 cout <<"Choice 2 :" <<'\t'<<"sales_Person"<<endl;
                 cout <<endl; 
                 int choice0; 
-                choice0=choice(); 
+                choice0=choice();  
+                //here we are cheaking wether user is giving correct choice of input or not
                 while(!(choice1>0&&choice1<=2))
                 {
                     cout << "Invalid input enter choice between 1 or 2" <<endl;
@@ -178,7 +182,9 @@ int main()
                 switch(choice0)
                 {
                     
-                    case wage_Employe :  
+                    case wage_Employe : 
+                        //here we are cheking if the no of total employs data is inserted or not 
+                        // if yes and we do not stop program will crash  
                         if(w>=wage_nos)
                         {
                             cout <<"There are only " << w <<" wage employs you can not insert any more data for wage employs" <<endl;
@@ -192,6 +198,8 @@ int main()
                         break; 
 
                     case sales_Person : 
+                        //here we are cheking if the no of total employs data is inserted or not 
+                        // if yes and we do not stop program will crash
                         if(s>=sale_nos)
                         {
                             cout <<"There are only " << s <<" sales employs you can not insert any more data for sales employs" <<endl;
