@@ -14,8 +14,6 @@ class Employ
 {
        
     protected: 
-    
-    static int sale_Employ_id ; 
     string emp_name;
     string emp_type; 
     int emp_id; 
