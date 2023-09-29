@@ -1,11 +1,12 @@
 #include<bits/stdc++.h> 
 
 using namespace std; 
-int sav_count=1001;   
 class Account
 {
+    
      
     public : 
+        static int sav_count;
         string name;  
         double balance;
         int account_no; 
@@ -60,8 +61,10 @@ class Account
         
        
        
+       
 
 }; 
+int Account::sav_count=1001;   
 class Account_type : public Account 
 {
    string account_type; 
@@ -171,17 +174,17 @@ int main()
                         case savings_account : 
                                 i++;
                                 Acc_type[i].Savings_account();  
-                                sav_count++; 
+                                Acc_type[i].sav_count++; 
                                 break; 
                         case current_account : 
                                 i++;
                                 Acc_type[i].Current_account(); 
-                                sav_count++; 
+                                Acc_type[i].sav_count++; 
                                 break;  
                         case dmat_account : 
                                 i++;
                                 Acc_type[i].Dmat_account(); 
-                                sav_count++;
+                                Acc_type[i].sav_count++;
                                 break;  
                     } 
                     break; 

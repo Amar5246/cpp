@@ -1,3 +1,9 @@
+/*Write a class Student having following –
+Student Roll Number (int)
+Student Name (char array)
+Date of Birth (Date class object where Date is user defined class)
+Implement default constructor, parameterized constructor, accept, display. Generate the student roll number automatically.
+*/
 #include<iostream>
 using namespace std; 
 int roll=1;

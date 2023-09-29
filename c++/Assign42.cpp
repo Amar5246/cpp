@@ -1,3 +1,7 @@
+/*Write a class Employee for an application which will have data members for employee id, employee name and salary. Provide the following functionalities in Employee class.
+	1. Initialing objects using default and parameterized constructors.
+	2. Accepting and displaying the information of employee from console
+*/
 #include<iostream>
 using namespace std; 
 int Employ_id = 23901;

@@ -1,9 +1,10 @@
-//Implement class Complex with real (int) and imaginary (int) parts as data members of class. Implement below functions inside this class.
-//default constructor, parameterized constructor, getter functions for real and imaginary parts, setter functions for real and imaginary parts, display function.
-
-
-//Write a program to count number of objects created for above class Complex . Use static data member and member function.
-
+/*Create objects c1,c2,c3,c4 of class Complex implemented earlier. Overload necessary operators to execute following statements
+c3=c1+c2
+c3=c1-c2
+c2= -c1
+c4= ++c1
+c4=c1++
+*/
 
 #include<iostream> 
 using namespace std; 
